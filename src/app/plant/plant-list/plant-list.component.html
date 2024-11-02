@@ -37,6 +37,9 @@
         font-size: 18px;
       }
 
+      .total-plantas {
+        font-size: 20px; 
+      }
 
       footer {
         padding: 5px 0;
@@ -79,6 +82,13 @@
           </tbody>
         </table>
       </div>
+
+      <div class="mt-1">
+        <div *ngFor="let pintext of PlantasInteriorExterior" class="total-plantas">
+          Total plantas de {{ pintext.tipoplanta.toLowerCase() }}: {{ pintext.total }}
+        </div>
+      </div>
+
     </div>
   </div>
 

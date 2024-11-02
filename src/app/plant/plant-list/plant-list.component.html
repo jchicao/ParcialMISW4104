@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Plantas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+      body {
+        background-color: #FFFFFF;
+      }
+
+      .container-custom {
+        margin-left: 5%;
+      }
+        
+      h1 {
+        font-weight: bold;
+        font-size: 36px;
+        font-family: Georgia, serif;
+        margin-top: 10px;
+      }
+
+      .img-fluid {
+        width: 100%; 
+        height: 360px; 
+      }
+
+      hr {
+        border: 1px solid;
+        margin: 20px 0;
+      }
+
+      table {
+        font-size: 18px;
+      }
+
+
+      footer {
+        padding: 5px 0;
+        text-align: center;
+        font-size: 18px;
+        color: black;
+        font-weight: bold;
+      }
+    </style>
+</head>
+
+<body>
+  <div class="container-custom">
+    <div class="col">
+      <h1 class="text">Vivero El Otoño</h1>
+      <hr>
+      <img src="assets/images/Header.png" alt="Imagen del vivero" class="img-fluid">
+      <hr>
+    </div>
+
+    <div class="col-7">
+      <div class="table-responsive">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nombre común</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Clima</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let c of plants">
+              <td class="font-weight-bold">{{c.id}}</td>
+              <td>{{c.nombre_comun}}</td>
+              <td>{{c.tipo}}</td>
+              <td>{{c.clima}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Contact us: +57 3102105253 - info&#64;viveroelotonio.com - &#64;viveroelotonio
+  </footer>
+
+</body>
+</html>
